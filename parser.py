@@ -25,7 +25,7 @@ class Parser:
         else:
             return "No new events"
 
-    def get_current_events(self) -> list[dict]:
+    def get_current_events(self):
         page = requests.get("https://ipts.innopolis.university/projects")
 
         if not page.status_code == 200:
@@ -71,7 +71,7 @@ class Parser:
         cards = sorted(cards, key=lambda x: x["date"][0])
         return cards
 
-    def get_events_to_str(self, events: list[dict]) -> str:
+    def get_events_to_str(self, events):
         past, current, future = [], [], []
 
         for event in events:

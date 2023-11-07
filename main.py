@@ -36,7 +36,7 @@ async def get_current_events_command(update: Update, contex: ContextTypes.DEFAUL
 
 
 # Responses
-def handle_response(text: str) -> str:
+def handle_response(text):
     return "Please, use commands"
 
 
